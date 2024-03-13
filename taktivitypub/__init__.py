@@ -1,4 +1,4 @@
-from taktivitypub.activity import Create, Delete, Follow
+from taktivitypub.activity import Create, Delete, Follow, Undo
 from taktivitypub.actor import Actor
 from taktivitypub.base import APObject, Tombstone
 from taktivitypub.constants import ObjectType
@@ -23,4 +23,5 @@ TYPE_MAPPING: dict[ObjectType, type[APObject]] = {
     ObjectType.Note: Note,
     ObjectType.Person: Actor,
     ObjectType.Tombstone: Tombstone,
+    ObjectType.Undo: Undo,
 }
