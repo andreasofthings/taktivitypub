@@ -106,3 +106,12 @@ class Follow(Activity):
     """
 
     type: Literal[ObjectType.Follow] = ObjectType.Follow
+
+
+class Undo(Activity):
+    """
+    An actor trying to undo a previous activity.
+    For example, when a follow request is un-done.
+    """
+
+    type: Literal[ObjectType.Undo] = ObjectType.Undo
